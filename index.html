@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Import Google Fonts -->
+    <link type="text/css" href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet">
+
+    <!-- Import materialize.css -->
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen"/>
+
+    <!-- Import style.css -->
+    <link type="text/css" rel="stylesheet" href="/css/style.css" media="screen"/>
+
+    <!-- Import materialize.js -->
+    <script src="/js/materialize.min.js"></script>
+
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="VPN, Soham Roy, developer">
+    <meta name="author" content="Soham Roy">
+
+    <!-- Primary Meta Tags -->
+    <title>VPN | Soham Roy</title>
+    <meta name="title" content="VPN | Soham Roy">
+    <meta name="description" content="Openvpn VPN with certificates for highly secure tunneling.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="VPN | Soham Roy">
+    <meta property="og:description" content="Openvpn VPN with certificates for highly secure tunneling.">
+    <meta property="og:image" content="/icon.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="VPN | Soham Roy">
+    <meta property="twitter:description" content="Openvpn VPN with certificates for highly secure tunneling.">
+    <meta property="twitter:image" content="/icon.svg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#41a145">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#41a145">
+
+    <!-- Invisible Captcha -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<body>
+    <!--Main-->
+    <section id="main" class="block grey darken-4 section ">
+        <div class="container">
+            <br>
+            <h3 class="center white-text">VPN</h3>
+            <br><br><br><br>
+            <form id="form" action="/api/v1/signup" method="post" autocomplete="off" novalidate>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix grey-text text-lighten-1">email</i>
+                        <input id="email" name="email" type="email" class="validate grey-text text-lighten-2" required>
+                        <label class="grey-text text-lighten-4" for="email">Email Addres</label>
+                        <span class="grey-text text-lighten-4 helper-text" for="email" data-error="Please enter a valid email address."></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix grey-text text-lighten-1">lock</i>
+                        <input id="code" name="code" type="password" class="validate grey-text text-lighten-2">
+                        <label class="grey-text text-lighten-4" for="code">Code</label>
+                        <span class="grey-text text-lighten-4 helper-text" for="code" data-error="Please enter a valid code.">Leave empty if you want to request a new certificate.</span>
+                    </div>
+                    <div class="col s12 right-align">
+                        <button class="waves-effect btn grey-text text-darken-3 green accent-4" id="submit" type="submit">Request</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Recaptcha -->
+            <div id="recaptcha" class="g-recaptcha" data-sitekey="6LflWLIUAAAAAKg8ACsmcvzIzLnwx3PQ84p0NzWT" data-callback="signup" data-size="invisible" data-badge="inline"></div>
+
+            <div class="row">
+                <div class="col s12 center-align">
+                    <small>
+                        <span class="grey-text text-lighten-1">This page is protected by reCAPTCHA and the Google
+                            <a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a> and
+                            <a href="https://www.google.com/intl/en/policies/terms/">Terms of Service</a> apply.</span></small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--About-->
+    <section id="about" class="block green darken-3 section ">
+        <div class="container">
+            <br>
+            <h3 class="center white-text">About</h3>
+            <br><br><br><br>
+            <div class="row white-text">
+                <div class="col s4 cen">
+                    <h4>Secure</h4>
+                    <span>Uses military grade encryption.</span>
+                </div>
+                <div class="col s4 cen">
+                    <h4>Configurable</h4>
+                    <span>One option.</span>
+                </div>
+                <div class="col s4 cen">
+                    <h4>Private</h4>
+                    <span>Probably doesn't log.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Import lib.js -->
+    <script src="/js/lib.js"></script>
+    <!-- Import index.js -->
+    <script src="/js/index.js"></script>
+</body>
+</html>

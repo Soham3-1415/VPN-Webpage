@@ -1,0 +1,9 @@
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.block {
+    min-height: 100vh;
+}
+
+.grecaptcha-badge { display: none; }
