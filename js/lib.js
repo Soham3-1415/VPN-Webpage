@@ -26,9 +26,9 @@ const xhrFail = () => { console.log('XMLHttpRequest Failed.'); };
 const postFormJSON = (xhr,form,data,success,error) => {
     xhr.open('post', form.action, true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-    xhr.send(JSON.stringify(data));
     xhr.onload = success;
     xhr.onerror = error;
+    xhr.send(JSON.stringify(data));
 };
 
 const getFormData = (form,exceptions) => {
@@ -40,4 +40,14 @@ const getFormData = (form,exceptions) => {
         }
     }
     return data;
+};
+
+const downloadFile = (data,mimeType,fileName) => {
+    const blob = new Blob([data], { type: mimeType });
+    const blobURL = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = blobURL;
+    link.download = fileName;
+    link.style.display = 'none';
+    link.click();
 };
