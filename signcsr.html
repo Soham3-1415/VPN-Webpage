@@ -82,12 +82,14 @@
                         <div class="file-field input-field">
                             <div class = "btn grey-text text-darken-3 grey lighten-4">
                                 <span>Browse</span>
-                                <input id="file" type="file" name="csr">
+                                <input id="file" type="file">
                             </div>
                             <div class = "file-path-wrapper">
-                                <input class="grey-text text-lighten-4 file-path validate" id="file-info" type="text" placeholder="Upload CSR">
+                                <input class="grey-text text-lighten-4 file-path" id="file-wrapper" type="text" placeholder="Upload CSR">
+                                <label class="red-text" id="file-wrapper-label" for="file-wrapper"></label>
                             </div>
                         </div>
+                        <input id="file-data" type="hidden" name="csr">
                     </div>
                     <div class="col right-align s12">
                         <button class="waves-effect btn grey-text text-darken-3 green accent-4" id="submit" type="submit">Generate</button>
