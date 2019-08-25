@@ -35,6 +35,7 @@ file.addEventListener('change', () => {
     else {
         file.files[0].text().then(text => {
             if (/^-----BEGIN CERTIFICATE REQUEST-----\n((?:[A-Za-z0-9+/]{4})|(?:[\n]))*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?\n-----END CERTIFICATE REQUEST-----(\n?)$/.test(text)) {
+                text = text.replace(/\n$/,'');
                 statusMessage = '';
                 file.setCustomValidity(statusMessage);
                 fileWrapperLabel.innerText = statusMessage;
