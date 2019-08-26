@@ -108,6 +108,5 @@ const solvechallenge = () => {
 form.onsubmit = () =>  {
     event.preventDefault();
     if(!form.checkValidity()) { return; }
-    console.log('test');
     solvechallenge();
 };
