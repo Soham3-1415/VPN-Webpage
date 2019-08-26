@@ -85,7 +85,7 @@ const signcert = () => {
             downloadFile(response.cert,'application/x-x509-user-cert','client.pem')
         }
     };
-    postFormJSON(xhr,form,data,success,xhrFail);
+    postFormJSON(xhr,{action: '/api/v1/signcsr'},data,success,xhrFail);
 };
 
 const solvechallenge = () => {
