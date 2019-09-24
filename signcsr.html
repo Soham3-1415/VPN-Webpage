@@ -15,7 +15,7 @@
 
     <!-- Let browser know website is optimized for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="VPN, Soham Roy, developer">
     <meta name="author" content="Soham Roy">
 
@@ -48,7 +48,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -58,50 +58,55 @@
     <meta name="theme-color" content="#41a145">
 </head>
 <body>
-    <!--Main-->
-    <section id="main" class="block grey darken-4 section ">
-        <div class="container">
-            <br>
-            <h3 class="center white-text">Sign CSR</h3>
-            <br><br><br><br>
-            <form id="form" action="/api/v1/solvechallenge" method="post" novalidate>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix grey-text text-lighten-1">email</i>
-                        <input id="email" name="email" type="email" class="validate grey-text text-lighten-2" required>
-                        <label class="grey-text text-lighten-4" for="email">Email Addres</label>
-                        <span class="grey-text text-lighten-4 helper-text" for="email" data-error="Please enter a valid email address."></span>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix grey-text text-lighten-1">lock</i>
-                        <input id="code" name="code" type="password" class="validate grey-text text-lighten-2" required>
-                        <label class="grey-text text-lighten-4" for="code">Code</label>
-                        <span class="grey-text text-lighten-4 helper-text" for="code" data-error="Please enter a valid code."></span>
-                    </div>
-                    <div class="col s12">
-                        <div class="file-field input-field">
-                            <div class = "btn grey-text text-darken-3 grey lighten-4">
-                                <span>Browse</span>
-                                <input id="file" type="file">
-                            </div>
-                            <div class = "file-path-wrapper">
-                                <input class="grey-text text-lighten-4 file-path" id="file-wrapper" type="text" placeholder="Upload CSR">
-                                <label class="red-text" id="file-wrapper-label" for="file-wrapper"></label>
-                            </div>
-                        </div>
-                        <input id="file-data" type="hidden" name="csr">
-                    </div>
-                    <div class="col right-align s12">
-                        <button class="waves-effect btn grey-text text-darken-3 green accent-4" id="submit" type="submit">Generate</button>
-                    </div>
+<!--Main-->
+<section id="main" class="block grey darken-4 section ">
+    <div class="container">
+        <br>
+        <h3 class="center white-text">Sign CSR</h3>
+        <br><br><br><br>
+        <form id="form" action="/api/v1/solvechallenge" method="post" novalidate>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix grey-text text-lighten-1">email</i>
+                    <input id="email" name="email" type="email" class="validate grey-text text-lighten-2" required>
+                    <label class="grey-text text-lighten-4" for="email">Email Addres</label>
+                    <span class="grey-text text-lighten-4 helper-text" for="email"
+                          data-error="Please enter a valid email address."></span>
                 </div>
-            </form>
-        </div>
-    </section>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix grey-text text-lighten-1">lock</i>
+                    <input id="code" name="code" type="password" class="validate grey-text text-lighten-2" required>
+                    <label class="grey-text text-lighten-4" for="code">Code</label>
+                    <span class="grey-text text-lighten-4 helper-text" for="code"
+                          data-error="Please enter a valid code."></span>
+                </div>
+                <div class="col s12">
+                    <div class="file-field input-field">
+                        <div class="btn grey-text text-darken-3 grey lighten-4">
+                            <span>Browse</span>
+                            <input id="file" type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="grey-text text-lighten-4 file-path" id="file-wrapper" type="text"
+                                   placeholder="Upload CSR">
+                            <label class="red-text" id="file-wrapper-label" for="file-wrapper"></label>
+                        </div>
+                    </div>
+                    <input id="file-data" type="hidden" name="csr">
+                </div>
+                <div class="col right-align s12">
+                    <button class="waves-effect btn grey-text text-darken-3 green accent-4" id="submit" type="submit">
+                        Generate
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
 
-    <!-- Import lib.js -->
-    <script src="/js/lib.js"></script>
-    <!-- Import signcsr.js -->
-    <script src="/js/signcsr.js"></script>
+<!-- Import lib.js -->
+<script src="/js/lib.js"></script>
+<!-- Import signcsr.js -->
+<script src="/js/signcsr.js"></script>
 </body>
 </html>

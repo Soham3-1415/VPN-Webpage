@@ -6,4 +6,10 @@ body {
     min-height: 100vh;
 }
 
-.grecaptcha-badge { display: none; }
+#about-text {
+    font-size: 140%;
+}
+
+.grecaptcha-badge {
+    display: none;
+}

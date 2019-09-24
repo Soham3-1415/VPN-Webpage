@@ -15,7 +15,7 @@
 
     <!-- Let browser know website is optimized for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="VPN, Soham Roy, developer">
     <meta name="author" content="Soham Roy">
 
@@ -48,7 +48,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -61,73 +61,127 @@
     <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
-    <!--Main-->
-    <section id="main" class="block grey darken-4 section ">
-        <div class="container">
-            <br>
-            <h3 class="center white-text">VPN</h3>
-            <br><br><br><br>
-            <form id="form" action="/api/v1/signup" method="post" novalidate>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix grey-text text-lighten-1">email</i>
-                        <input id="email" name="email" type="email" class="validate grey-text text-lighten-2" required>
-                        <label class="grey-text text-lighten-4" for="email">Email Addres</label>
-                        <span class="grey-text text-lighten-4 helper-text" for="email" data-error="Please enter a valid email address."></span>
-                    </div>
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix grey-text text-lighten-1">lock</i>
-                        <input id="code" name="code" type="password" class="validate grey-text text-lighten-2">
-                        <label class="grey-text text-lighten-4" for="code">Code</label>
-                        <span class="grey-text text-lighten-4 helper-text" for="code" data-error="Please enter a valid code.">Leave empty if you want to request a new certificate.</span>
-                    </div>
-                    <div class="col s12 right-align">
-                        <button class="waves-effect btn grey-text text-darken-3 grey lighten-4" id="getca" type="button">CA Cert</button>
-                        <button class="waves-effect btn grey-text text-darken-3 green accent-4" id="submit" type="submit">Request</button>
-                    </div>
-                </div>
-            </form>
-
-            <!-- Recaptcha -->
-            <div id="recaptcha" class="g-recaptcha" data-sitekey="6LflWLIUAAAAAKg8ACsmcvzIzLnwx3PQ84p0NzWT" data-callback="signup" data-size="invisible" data-badge="inline"></div>
-
+<!--Main-->
+<section id="main" class="block grey darken-4 section ">
+    <div class="container">
+        <br>
+        <h3 class="center white-text">VPN</h3>
+        <br><br><br><br>
+        <form id="form" action="/api/v1/signup" method="post" novalidate>
             <div class="row">
-                <div class="col s12 center-align">
-                    <small>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix grey-text text-lighten-1">email</i>
+                    <input id="email" name="email" type="email" class="validate grey-text text-lighten-2" required>
+                    <label class="grey-text text-lighten-4" for="email">Email Addres</label>
+                    <span class="grey-text text-lighten-4 helper-text" for="email"
+                          data-error="Please enter a valid email address."></span>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix grey-text text-lighten-1">lock</i>
+                    <input id="code" name="code" type="password" class="validate grey-text text-lighten-2">
+                    <label class="grey-text text-lighten-4" for="code">Code</label>
+                    <span class="grey-text text-lighten-4 helper-text" for="code"
+                          data-error="Please enter a valid code.">Leave empty if you want to request a new certificate.</span>
+                </div>
+                <div class="col s12 right-align">
+                    <button class="waves-effect btn grey-text text-darken-3 grey lighten-4" id="getca" type="button">CA
+                        Cert
+                    </button>
+                    <button class="waves-effect btn grey-text text-darken-3 green accent-4" id="submit" type="submit">
+                        Request
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Recaptcha -->
+        <div id="recaptcha" class="g-recaptcha" data-sitekey="6LflWLIUAAAAAKg8ACsmcvzIzLnwx3PQ84p0NzWT"
+             data-callback="signup" data-size="invisible" data-badge="inline"></div>
+
+        <div class="row">
+            <div class="col s12 center-align">
+                <small>
                         <span class="grey-text text-lighten-1">This page is protected by reCAPTCHA and the Google
                             <a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a> and
                             <a href="https://www.google.com/intl/en/policies/terms/">Terms of Service</a> apply.</span></small>
-                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!--About-->
-    <section id="about" class="block green darken-3 section ">
-        <div class="container">
+<!--About-->
+<section id="about" class="block green darken-3 section ">
+    <div class="container">
+        <br>
+        <h3 class="center white-text">About</h3>
+        <br>
+        <div class="divider"></div>
+        <br>
+        <div class="row white-text flow-text" id="about-text">
+            I made this project for a few reasons:
+            <ul>
+                <li> - learn to create APIs</li>
+                <li> - work with ReCaptcha</li>
+                <li> - use Hashicorp's Vault to run a PKI</li>
+                <li> - use Node.js</li>
+                <li> - practice writing secure code</li>
+                <li> - scale an OpenVPN instance</li>
+            </ul>
             <br>
-            <h3 class="center white-text">About</h3>
-            <br><br><br><br>
-            <div class="row white-text">
-                <div class="col s4 cen">
-                    <h4>Secure</h4>
-                    <span>Uses military grade encryption.</span>
-                </div>
-                <div class="col s4 cen">
-                    <h4>Configurable</h4>
-                    <span>One option.</span>
-                </div>
-                <div class="col s4 cen">
-                    <h4>Private</h4>
-                    <span>Probably doesn't log.</span>
-                </div>
-            </div>
+            As such, this is a personal project of mine and should not be taken as a subsitute for an actually reliable
+            VPN.
+            In fact, don't count on this at all. This application has not been vetted.
+            <br><br>
+            Don't expect security.
+            <br>
+            Don't expect privacy.
+            <br>
+            Don't expect reliability.
+            <br>
+            Don't abuse this service.
+            <br><br>
+            In addition, consider if you really need a VPN. Companies often try to sell VPNs using scare tactics. I'm
+            not doing a writeup here, but keep in mind what a VPN actually does.
+            It's also quite easy and cheap to run your own VPN.
+            <br><br>
+            <div class="divider"></div>
+            <br>
+            To connect, you must have a certificate. Currently, certificates are issued for 7 days.
+            <br>
+            I use OpenVPN. You can connect with UDP, TCP, or with TCP wrapped with TLS.
+            <br>
+            I try to not maintain connection logs, but no promises are being made.
+            <br>
+            Connections must be made using AES-256-GCM. TLS 1.2 support is required.
+            <br><br>
+            Port 1194 is for UDP and TCP connections.
+            <br>
+            TLS wrapped connections must be made to port 80.
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Import lib.js -->
-    <script src="/js/lib.js"></script>
-    <!-- Import index.js -->
-    <script src="/js/index.js"></script>
+<!-- Footer -->
+<footer class="section grey darken-4 white-text center page-footer">
+    <div class="container">
+        <address class="white-text">
+            Site GitHub: <a href="https://github.com/soham3-1415/VPN-Webpage"
+                            target="_blank">soham3-1415/VPN-Webpage</a>
+            <br>
+            API GitHub: <a href="https://github.com/soham3-1415/VPN-Webpage-API" target="_blank">soham3-1415/VPN-Webpage-API</a>
+            <br>
+            Email: <a href="https://github.com/soham3-1415/VPN-Webpage-API" target="_blank">admin@sohamroy.me</a>
+        </address>
+    </div>
+    <br>
+    <div class="container">
+        Soham Roy &copy; 2019
+    </div>
+</footer>
+
+<!-- Import lib.js -->
+<script src="/js/lib.js"></script>
+<!-- Import index.js -->
+<script src="/js/index.js"></script>
 </body>
 </html>
